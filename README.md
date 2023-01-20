@@ -13,7 +13,14 @@ A short description of the motivation behind the creation and maintenance of the
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Backend Setup
+The original backend for the application has already been deployed to [Render](https://easi-backend.onrender.com) with /translate as the endpoint for putting responses, however if you wish to run it on your local computer here are the steps to do so. 
+
+1. Create a virtual environment by typing out `python -m venv $ENV_NAME`
+2. Activate virtual environment `.\venv\Scripts\activate `
+3. Create an `.env` file and name it `OPENAI_KEY` ex. `OPENAI_KEY.env`
+4. Inside of the .env file paste `OPENAI_KEY=sk-L9zG---` the value of OPENAI_KEY should be your API key from OpenAI GPT-3
+5. Run `pip install -r requirements.txt` on your terminal
 
 ## API Reference
 
