@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
     Widget _buildForgotPasswordBtn() {
       return Container(
         alignment: Alignment.topRight,
-        child: FlatButton(
+        child: TextButton(
           onPressed: () {
             Navigator.push(
               context,
