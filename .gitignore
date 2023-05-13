@@ -1,0 +1,4 @@
+.dart-tool
+__pycache__
+env
+.env
