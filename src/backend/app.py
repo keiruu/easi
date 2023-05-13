@@ -7,8 +7,7 @@ import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+load_dotenv('.env')
 
 #OPENAI GPT-3 API KEY
 openai.api_key = os.environ.get('OPENAI_KEY')

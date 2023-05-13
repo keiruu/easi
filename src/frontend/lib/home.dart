@@ -103,12 +103,12 @@ class _HomeState extends State<Home> {
       "Nov",
       "Dec"
     ];
-    print(simplified);
+    
     dbRef.push().set({
       "prompt": prompt,
       "result": simplified,
       "userUID": uid,
-      "placeholder": " ",
+      "placeholder": "",
       // "time": now.hour.toString() + ":" + now.minute.toString() + ":" + now.second.toString(),
       "date": now.day.toString() +
           " " +

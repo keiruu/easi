@@ -33,16 +33,19 @@ class _HistoryState extends State<History> {
     final uid = FirebaseAuth.instance.currentUser?.uid;
     dbRef = FirebaseDatabase.instance.ref().child('history');
     final listed = dbRef.orderByChild("userUID").equalTo(uid);
+    
 
     var data = [];
     listed.onValue.listen((event) {
       for (final child in event.snapshot.children) {
         data.add(child.value);
       }
-      if (data != null) {
+      var list = List.from(data.reversed);
+
+      if (list != null) {
         setState(() {
-          _history = data;
-          _historyLength = data.length;
+          _history = list;
+          _historyLength = list.length;
         });
       }
 
@@ -53,7 +56,6 @@ class _HistoryState extends State<History> {
           index["placeholder"] = index["result"];
         }
       });
-
     });
   }
 
